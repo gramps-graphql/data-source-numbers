@@ -1,4 +1,3 @@
-import { MockList } from 'graphql-tools';
 import casual from 'casual';
 
 export default {
@@ -8,6 +7,6 @@ export default {
     found: casual.boolean,
     number: casual.number,
     type: casual.random_element(['trivia', 'date', 'math', 'year']),
-    date: casual.date('mmm D')
+    date: casual.date('mmm D'),
   }),
 };

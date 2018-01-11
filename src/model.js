@@ -2,15 +2,13 @@ import { GrampsError } from '@gramps/errors';
 import { GraphQLModel } from '@gramps/rest-helpers';
 
 export default class NumbersModel extends GraphQLModel {
-  
   async get(number, type) {
-    console.log(await this.connector.get(`/${number}/${type}`))
     return this.connector.get(`/${number}/${type}`).catch(res =>
       this.throwError(res.error, {
         description: 'Could not get the info',
       }),
     );
-  }  
+  }
 
   /**
    * Throws a custom GrAMPS error.
@@ -35,6 +33,6 @@ export default class NumbersModel extends GraphQLModel {
       docsLink: 'https://ibm.biz/gramps-data-source-tutorial',
     };
 
-    throw GrampsError(Object.assign({defaults}, {customErrorData}));
+    throw GrampsError(Object.assign({ defaults }, { customErrorData }));
   }
 }
