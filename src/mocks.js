@@ -3,9 +3,11 @@ import casual from 'casual';
 
 export default {
   // TODO: Update to mock all schema types and fields
-  PFX_DataSourceBase: () => ({
-    id: casual.uuid,
-    name: casual.name,
-    lucky_numbers: () => new MockList([0, 3]),
+  Numbers_Trivia: () => ({
+    text: casual.sentence,
+    found: casual.boolean,
+    number: casual.number,
+    type: casual.random_element(['trivia', 'date', 'math', 'year']),
+    date: casual.date('mmm D')
   }),
 };

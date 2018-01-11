@@ -54,7 +54,7 @@ const questions = [
 module.exports = async ({ project, context }) => {
   const opts = await context.prompt(questions);
 
-  replaceDefaultStringsInFiles({ ...opts, templateName: pkg.name, project });
+  replaceDefaultStringsInFiles(Object.assign({ opts }, { templateName: pkg.name, project }));
 
   // eslint-disable-next-line no-console
   console.log(`

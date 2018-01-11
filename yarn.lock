@@ -85,6 +85,14 @@
     reify "^0.13.5"
     yargs "^10.0.3"
 
+"@gramps/errors@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@gramps/errors/-/errors-1.0.1.tgz#b0852abbcc6207a18cd7bf1669c3947f9f015398"
+  dependencies:
+    cross-env "^5.1.1"
+    graphql-apollo-errors "^2.0.2"
+    uuid "^3.1.0"
+
 "@gramps/gramps@^1.0.0", "@gramps/gramps@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@gramps/gramps/-/gramps-1.1.0.tgz#902a38a922d65b7c7b5eb27fcc2db9b2da125e39"
@@ -92,6 +100,14 @@
     chalk "^2.1.0"
     graphql-tools "^2.14.1"
     lodash.merge "^4.6.0"
+
+"@gramps/rest-helpers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@gramps/rest-helpers/-/rest-helpers-1.0.0.tgz#8cda83e47f35db5c19e25c10d2d80053070c0ece"
+  dependencies:
+    dataloader "^1.3.0"
+    request "^2.83.0"
+    request-promise "^4.2.2"
 
 "@semantic-release/commit-analyzer@^5.0.0":
   version "5.0.0"
@@ -1023,7 +1039,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.5.1:
+bluebird@^3.5.0, bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -1048,7 +1064,7 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-boom@4.x.x:
+boom@4.x.x, boom@^4.2.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/boom/-/boom-4.3.1.tgz#4f8a3005cb4a7e3889f749030fd25b96e01d2e31"
   dependencies:
@@ -1583,6 +1599,10 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+dataloader@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-1.3.0.tgz#6fec5be4b30a712e4afd30b86b4334566b97673b"
 
 dateformat@^1.0.11:
   version "1.0.12"
@@ -2527,6 +2547,14 @@ graphcool-yml@^0.0.6:
     replaceall "^0.1.6"
     scuid "^1.0.2"
     yaml-ast-parser "^0.0.40"
+
+graphql-apollo-errors@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-apollo-errors/-/graphql-apollo-errors-2.0.3.tgz#c4e0c605e0581a9514b3d3e03218328f2c4700bb"
+  dependencies:
+    lodash "^4.17.4"
+    minilog "^3.1.0"
+    seven-boom "^1.0.3"
 
 graphql-config-extension-graphcool@^0.0.4:
   version "0.0.4"
@@ -3830,6 +3858,10 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
+microee@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/microee/-/microee-0.0.6.tgz#a12bdb0103681e8b126a9b071eba4c467c78fffe"
+
 micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -3873,6 +3905,12 @@ mimic-fn@^1.0.0:
 mimic-response@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.0.tgz#df3d3652a73fded6b9b0b24146e6fd052353458e"
+
+minilog@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/minilog/-/minilog-3.1.0.tgz#d2d0f1887ca363d1acf0ea86d5c4df293b3fb675"
+  dependencies:
+    microee "0.0.6"
 
 "minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
@@ -4685,6 +4723,15 @@ request-promise-native@^1.0.3:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
+request-promise@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.2.tgz#d1ea46d654a6ee4f8ee6a4fea1018c22911904b4"
+  dependencies:
+    bluebird "^3.5.0"
+    request-promise-core "1.1.1"
+    stealthy-require "^1.1.0"
+    tough-cookie ">=2.3.3"
+
 request@2.81.0, request@^2.74.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
@@ -4930,6 +4977,14 @@ setprototypeof@1.0.3:
 setprototypeof@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
+
+seven-boom@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/seven-boom/-/seven-boom-1.0.3.tgz#433038cd5f9e491607c374d3a23934be02e44473"
+  dependencies:
+    boom "^4.2.0"
+    lodash "^4.17.4"
+    uuid "^3.0.1"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -5436,7 +5491,7 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-uuid@^3.0.0, uuid@^3.1.0:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 

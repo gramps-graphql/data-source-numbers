@@ -1,12 +1,12 @@
 {
-  "name": "@gramps/data-source-base",
-  "description": "GrAMPS GraphQL Data Source Base",
+  "name": "@gramps/data-source-numbers",
+  "description": "GrAMPS GraphQL Data Source for Numbers API",
   "contributors": [
-    "Jason Lengstorf <jason@lengstorf.com>"
+    "Kim Brandwijk <kim.brandwijk@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gramps-graphql/data-source-base.git"
+    "url": "https://github.com/gramps-graphql/data-source-numbers.git"
   },
   "main": "dist/index.js",
   "directories": {
@@ -32,6 +32,8 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@gramps/errors": "^1.0.1",
+    "@gramps/rest-helpers": "^1.0.0",
     "casual": "^1.5.19"
   },
   "peerDependencies": {
@@ -41,6 +43,8 @@
   "devDependencies": {
     "@gramps/cli": "^1.1.3",
     "@gramps/gramps": "^1.1.0",
+    "@gramps/errors": "^1.0.1",
+    "@gramps/rest-helpers": "^1.0.0",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.3",
     "babel-jest": "^22.0.4",

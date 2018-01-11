@@ -1,21 +1,14 @@
 type Query {
-  "TODO: rename and add a description of this query"
-  getById(
-    "A unique identifier"
-    id: ID!
-  ): PFX_DataSourceBase
+  trivia(number: Int): Numbers_Trivia
+  date(date: String): Numbers_Trivia
+  math(number: Int): Numbers_Trivia
+  year(number: Int): Numbers_Trivia
 }
 
-"TODO: Choose a unique prefix and rename the type descriptively."
-type PFX_DataSourceBase {
-  "A unique identifier"
-  id: ID!
-  "Describe each field to help people use the data more effectively."
-  name: String
-  """
-  An array of very super lucky numbers.
-  
-  DISCLAIMER: The luckiness of these numbers is _not scientifically proven_.
-  """
-  lucky_numbers: [Int]
+type Numbers_Trivia {
+  text: String
+  found: Boolean
+  number: Int
+  type: String
+  date: String
 }

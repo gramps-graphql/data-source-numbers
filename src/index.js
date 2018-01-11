@@ -1,5 +1,6 @@
 import typeDefs from './schema.graphql';
-import context from './context';
+import Connector from './connector';
+import Model from './model';
 import resolvers from './resolvers';
 import mocks from './mocks';
 
@@ -8,9 +9,8 @@ import mocks from './mocks';
  * https://gramps.js.org/data-source/data-source-overview/
  */
 export default {
-  // TODO: Rename the context to describe the data source.
-  namespace: 'DataSourceBase',
-  context,
+  namespace: 'Numbers',
+  context: new Model({ connector: new Connector() }),
   typeDefs,
   resolvers,
   mocks,
