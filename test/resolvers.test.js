@@ -4,7 +4,9 @@ import expectNullable from './helpers/expectNullable';
 describe('Data Source Resolvers', () => {
   describe('Query', () => {
     const mockContext = {
-      get: (val, type) => Promise.resolve({ [type]: val }),
+      model: {
+        get: (val, type) => Promise.resolve({ [type]: val }),
+      },
     };
 
     describe('trivia', () => {
@@ -48,9 +50,9 @@ describe('Data Source Resolvers', () => {
     });
   });
 
-  // describe('PFX_DataSourceBase', () => {
-  //   const resolver = resolvers.PFX_DataSourceBase;
+  describe('Numbers_Trivia', () => {
+    const resolver = resolvers.Numbers_Trivia;
 
-  //   expectNullable(resolver, ['name']);
-  // });
+    expectNullable(resolver, ['date', 'year']);
+  });
 });

@@ -30,7 +30,7 @@ export default class NumbersModel extends GraphQLModel {
       errorCode: `${this.constructor.name}_Error`,
       description: message,
       graphqlModel: this.constructor.name,
-      docsLink: 'https://ibm.biz/gramps-data-source-tutorial',
+      docsLink: 'https://gramps.js.org/data-source/data-source-overview/',
     };
 
     throw GrampsError(Object.assign({ defaults }, { customErrorData }));
